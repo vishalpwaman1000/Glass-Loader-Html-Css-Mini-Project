@@ -1,0 +1,42 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-color: #202020;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.Glass{
+
+    width: 64px;
+    height: 144px;
+    border: 2px solid white;
+
+    transform: perspective(150px) rotateX(-45deg);
+
+    animation: Filling 2s linear infinite;
+}
+
+.LoadingText{
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto';
+
+    margin: 10px;
+}
+
+@keyframes Filling {
+        0%{
+            box-shadow: 0 0 blue inset;
+        }
+
+        100%{
+            box-shadow: 0 -144px blue inset;
+        }
+}
